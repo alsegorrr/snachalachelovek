@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Сначала человек</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#fff;--surface:#EEF6F7;--text:#0B2545;--accent:#008C95;--btn:#0B2545;--btn-text:#fff;--bad:#E9ECF2;--good:#D5F1EE;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B2545;--surface:#12325E;--text:#fff;--accent:#2EC4B6;--btn:#fff;--btn-text:#0B2545;--bad:#1B3E70;--good:#0F4B58}}
+:root[data-theme="dark"]{--bg:#0B2545;--surface:#12325E;--text:#fff;--accent:#2EC4B6;--btn:#fff;--btn-text:#0B2545;--bad:#1B3E70;--good:#0F4B58}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font:400 18px/1.6 Manrope,'Segoe UI',Arial,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--btn);color:var(--btn-text);padding:12px 16px;z-index:5}
+.skip:focus{left:8px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--accent)}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:22px;line-height:1.1}
+.brand b{font-weight:800}
+nav ul{display:flex;flex-wrap:wrap;gap:4px 8px;list-style:none;margin:0;padding:0}
+nav a{display:inline-block;padding:10px 12px;font-weight:600;text-decoration:none;border-bottom:3px solid transparent}
+nav a:hover,nav a[aria-current]{border-color:var(--accent)}
+h1{font-size:clamp(36px,6vw,60px);line-height:1.08;font-weight:800;margin:0 0 16px}
+h2{font-size:clamp(24px,4vw,32px);line-height:1.2;font-weight:800;margin:0 0 16px}
+h3{font-size:20px;margin:0 0 8px}
+section{padding:48px 0}
+.lead{font-size:21px;max-width:680px;margin:0 0 24px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:14px 24px;border:2px solid var(--btn);border-radius:10px;font:600 18px Manrope,Arial,sans-serif;text-decoration:none;background:var(--btn);color:var(--btn-text);cursor:pointer}
+.btn.alt{background:transparent;color:var(--text)}
+.alt-bg{background:var(--surface)}
+.quote{font-size:clamp(22px,4vw,32px);font-weight:800;border-left:6px solid var(--accent);padding-left:20px;margin:20px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;list-style:none;margin:0;padding:0}
+.card{background:var(--bg);border:2px solid var(--accent);border-radius:14px;padding:20px}
+.card p{margin:0 0 10px}
+.card a{font-weight:600}
+ul.list{padding-left:22px;margin:0 0 16px}
+ul.list li{margin-bottom:6px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px}
+caption{text-align:left;font-weight:600;padding-bottom:8px}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px dashed var(--accent)}
+th{font-weight:800}
+.bad{background:var(--bad)}.good{background:var(--good)}
+td ul{margin:0;padding-left:18px}
+.chk{list-style:none;padding:0;margin:0 0 12px}
+.chk li{margin-bottom:10px}
+.chk label{display:flex;gap:12px;align-items:flex-start;cursor:pointer}
+.chk input{width:24px;height:24px;margin-top:3px;accent-color:var(--accent);flex:none}
+.count{font-weight:800}
+.res li{margin-bottom:10px}
+label.f{display:block;font-weight:600;margin:14px 0 6px}
+input[type=text],textarea{width:100%;font:inherit;padding:12px;border:2px solid var(--text);border-radius:8px;background:var(--bg);color:var(--text)}
+footer{border-top:2px solid var(--accent);padding:28px 0;font-size:16px}
+footer ul{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-wrap:wrap;gap:8px 20px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main-content">Перейти к содержимому</a>
+<header><div class="wrap">
+<a class="brand" href="#home" aria-label="Сначала человек, на главную">
+<svg width="44" height="44" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="32" r="15" fill="var(--accent)"/><path d="M18 54C22 92 98 92 102 54M60 62V84" fill="none" stroke="var(--text)" stroke-width="13" stroke-linecap="round"/></svg>
+<span>Сначала <b>человек</b></span></a>
+<nav aria-label="Основное меню"><ul>
+<li><a href="#home">Главная</a></li>
+<li><a href="#communication">Этичная коммуникация</a></li>
+<li><a href="#environment">Доступная среда</a></li>
+<li><a href="#resources">Ресурсы</a></li>
+<li><a href="#about">О проекте</a></li>
+</ul></nav>
+</div></header>
+
+<main id="main-content">
+
+<div data-view="home" data-title="Главная">
+<section><div class="wrap">
+<h1 tabindex="-1">Сначала человек</h1>
+<p class="lead">Проект об этичной коммуникации с людьми с ОВЗ и о доступной среде, в которой комфортно всем.</p>
+<div class="btns"><a class="btn" href="#communication">Узнать правила общения</a><a class="btn alt" href="#environment">Проверить доступность</a></div>
+</div></section>
+<section class="alt-bg"><div class="wrap">
+<h2>Наша миссия</h2>
+<p class="quote">Сначала человек, потом диагноз.</p>
+<p>Мы собираем простые и понятные правила уважительного общения с людьми с ОВЗ и инвалидностью, а также базовые принципы доступной среды. Проект опирается на принцип «ничего о нас без нас» и на Конвенцию ООН о правах инвалидов.</p>
+</div></section>
+<section><div class="wrap">
+<h2>Почему это важно</h2>
+<ul class="grid">
+<li class="card"><h3>Слова имеют значение</h3><p>Корректные формулировки влияют на отношение к человеку и на его самоощущение.</p></li>
+<li class="card"><h3>Среда шире пандуса</h3><p>Доступность включает физическое пространство, сайты, документы и способ общения.</p></li>
+<li class="card"><h3>Это касается каждого</h3><p>Этике общения не нужно специальное образование, достаточно знать несколько правил.</p></li>
+</ul>
+</div></section>
+<section class="alt-bg"><div class="wrap">
+<h2>Что есть на сайте</h2>
+<ul class="grid">
+<li class="card"><h3>Этичная коммуникация</h3><p>Правила общения, глоссарий терминов и чек-лист для текстов.</p><a href="#communication">Открыть раздел</a></li>
+<li class="card"><h3>Доступная среда</h3><p>Принципы доступности и чек-лист для самопроверки.</p><a href="#environment">Открыть раздел</a></li>
+<li class="card"><h3>Ресурсы</h3><p>Документы, организации и инструменты.</p><a href="#resources">Открыть раздел</a></li>
+<li class="card"><h3>О проекте</h3><p>Команда и обратная связь.</p><a href="#about">Открыть раздел</a></li>
+</ul>
+</div></section>
+<section><div class="wrap">
+<h2>Для кого этот проект</h2>
+<ul class="list"><li>для студентов, преподавателей и сотрудников университета;</li><li>для волонтёров и организаторов мероприятий;</li><li>для всех, кто хочет научиться говорить корректно и без неловкости.</li></ul>
+</div></section>
+</div>
+
+<div data-view="communication" data-title="Этичная коммуникация">
+<section><div class="wrap">
+<h1 tabindex="-1">Этичная коммуникация</h1>
+<p class="lead">Как говорить и писать о людях с ОВЗ так, чтобы человек оставался на первом месте.</p>
+</div></section>
+<section class="alt-bg"><div class="wrap">
+<h2>Основные правила общения</h2>
+<ul class="grid">
+<li class="card"><h3>Обращайтесь к человеку</h3><p>Говорите о человеке, а не о диагнозе или ограничении.</p></li>
+<li class="card"><h3>Говорите напрямую</h3><p>Обращайтесь к самому человеку, а не к сопровождающему.</p></li>
+<li class="card"><h3>Спросите о помощи</h3><p>Предложите помощь и дождитесь ответа. Не помогайте без согласия.</p></li>
+<li class="card"><h3>Уважайте личное пространство</h3><p>Не трогайте кресло, трость и другие вспомогательные средства без разрешения.</p></li>
+<li class="card"><h3>Без жалости и героизации</h3><p>Человек с инвалидностью не «герой» и не «жертва» только из-за особенностей здоровья.</p></li>
+<li class="card"><h3>Не расспрашивайте о диагнозе</h3><p>Личные медицинские подробности человек рассказывает по желанию.</p></li>
+</ul>
+</div></section>
+<section><div class="wrap">
+<h2>Глоссарий: говорим так, не говорим так</h2>
+<div class="scroll"><table>
+<caption>Некорректные и корректные формулировки</caption>
+<thead><tr><th scope="col" class="bad">Некорректно</th><th scope="col" class="good">Корректно</th></tr></thead>
+<tbody>
+<tr><td><ul><li>Слепой, незрячие</li></ul></td><td><ul><li>Незрячий человек</li><li>Слабовидящий человек</li><li>Человек с особенностями зрения</li></ul></td></tr>
+<tr><td><ul><li>Глухой</li><li>Человек с проблемами слуха</li></ul></td><td><ul><li>Человек с глухотой</li><li>Слабослышащий человек</li><li>Человек с особенностями слуха</li></ul></td></tr>
+<tr><td><ul><li>Немой</li></ul></td><td><ul><li>Человек с особенностями речи</li><li>Человек с потерей речи</li><li>Человек с потерей голоса</li><li>Немой человек (используется редко)</li></ul></td></tr>
+<tr><td><ul><li>Человек с двигательными особенностями</li><li>Человек с двигательной инвалидностью</li><li>Человек с нарушением моторики (иногда употребляется для конкретных диагнозов)</li></ul></td><td><ul><li>Человек с особенностями опорно-двигательного аппарата</li><li>Человек на инвалидном кресле (если этого требует контекст)</li><li>Маломобильный пользователь</li></ul></td></tr>
+<tr><td><ul><li>Умственно отсталый</li></ul></td><td><ul><li>Человек с особенностями развития</li></ul></td></tr>
+<tr><td><ul><li>Инвалид</li><li>Страдает инвалидностью</li></ul></td><td><ul><li>Человек с инвалидностью</li><li>Человек с ментальной инвалидностью</li></ul></td></tr>
+<tr><td><ul><li>Даун</li><li>Больной</li><li>Солнечный человек</li><li>Страдает аутизмом</li></ul></td><td><ul><li>Человек с ментальными особенностями</li><li>Человек с синдромом Дауна</li><li>Человек с расстройством аутистического спектра</li></ul></td></tr>
+<tr><td><ul><li>Нарушения развития</li><li>Нарушения интеллекта</li></ul></td><td><ul><li>Особенности развития</li><li>Интеллектуальные особенности</li></ul></td></tr>
+<tr><td><ul><li>Палочка, палка, костыль</li></ul></td><td><ul><li>Белая трость</li><li>Тактильная белая трость</li><li>Сигнальная белая трость</li></ul></td></tr>
+<tr><td><ul><li>Язык жестов</li></ul></td><td><ul><li>Жестовый язык</li></ul></td></tr>
+</tbody></table></div>
+</div></section>
+<section class="alt-bg"><div class="wrap">
+<h2>Чего избегать</h2>
+<ul class="list">
+<li>жалостливых оборотов: «страдает», «прикован к коляске», «несмотря на болезнь»;</li>
+<li>героизации: «преодолел», «пример для нас» без причины;</li>
+<li>снисходительного тона и обращения на «ты» без договорённости;</li>
+<li>противопоставления «нормальные люди» и «люди с инвалидностью»;</li>
+<li>текстов о людях с ОВЗ, которые не обсудили с самими людьми.</li>
+</ul>
+</div></section>
+<section><div class="wrap">
+<h2>Чек-лист тона голоса: что проверить перед публикацией</h2>
+<p>Отметьте пункты по мере проверки текста.</p>
+<ul class="chk" data-chk>
+<li><label><input type="checkbox"><span>Тон совпадает с выбранной ролью: поддержка, партнёрство или информирование</span></label></li>
+<li><label><input type="checkbox"><span>Использована корректная, уместная терминология</span></label></li>
+<li><label><input type="checkbox"><span>Нет жалости, героизации, снисходительности</span></label></li>
+<li><label><input type="checkbox"><span>Учитывается тип проекта: продукт, сервис или коммуникация</span></label></li>
+<li><label><input type="checkbox"><span>Текст обращён к человеку, а не к диагнозу или ограничению</span></label></li>
+<li><label><input type="checkbox"><span>Сохраняется голос бренда, но без шаблонных фраз и канцелярита</span></label></li>
+<li><label><input type="checkbox"><span>Материал показан людям с ОВЗ — есть обратная связь</span></label></li>
+<li><label><input type="checkbox"><span>Соблюдён принцип «Ничего о нас без нас»</span></label></li>
+<li><label><input type="checkbox"><span>Текст вызывает доверие, а не напряжение или отчуждение</span></label></li>
+</ul>
+<p class="count" role="status" aria-live="polite"></p>
+</div></section>
+</div>
+
+<div data-view="environment" data-title="Доступная среда">
+<section><div class="wrap">
+<h1 tabindex="-1">Доступная среда</h1>
+<p class="lead">Среда доступна, когда человек может воспользоваться ею самостоятельно и безопасно: в здании, на сайте и в документах.</p>
+</div></section>
+<section class="alt-bg"><div class="wrap">
+<h2>Базовые принципы (POUR)</h2>
+<ul class="grid">
+<li class="card"><h3>Воспринимаемость</h3><p>Информацию можно увидеть, услышать или потрогать: есть альтернативы тексту, субтитры, контраст.</p></li>
+<li class="card"><h3>Управляемость</h3><p>Всем можно пользоваться разными способами, в том числе с клавиатуры, без точных движений.</p></li>
+<li class="card"><h3>Понятность</h3><p>Простой язык, предсказуемая навигация, понятные сообщения об ошибках.</p></li>
+<li class="card"><h3>Надёжность</h3><p>Содержимое работает с разными устройствами и вспомогательными технологиями.</p></li>
+</ul>
+</div></section>
+<section><div class="wrap">
+<h2>Чек-лист самопроверки: физическое пространство</h2>
+<ul class="chk" data-chk>
+<li><label><input type="checkbox"><span>Есть вход без ступеней или пандус с безопасным уклоном</span></label></li>
+<li><label><input type="checkbox"><span>Двери и проходы достаточно широкие для кресла-коляски</span></label></li>
+<li><label><input type="checkbox"><span>Есть лифт или другой способ добраться на все этажи</span></label></li>
+<li><label><input type="checkbox"><span>Есть доступный санузел</span></label></li>
+<li><label><input type="checkbox"><span>Указатели крупные и контрастные, есть тактильная и звуковая навигация</span></label></li>
+<li><label><input type="checkbox"><span>Есть место для связи с персоналом: кнопка вызова или контакты помощи</span></label></li>
+</ul>
+<p class="count" role="status" aria-live="polite"></p>
+<h2>Чек-лист самопроверки: сайт и документы</h2>
+<ul class="chk" data-chk>
+<li><label><input type="checkbox"><span>Контраст текста и фона не ниже 4,5:1</span></label></li>
+<li><label><input type="checkbox"><span>У изображений есть текстовое описание</span></label></li>
+<li><label><input type="checkbox"><span>Всё работает с клавиатуры, фокус виден</span></label></li>
+<li><label><input type="checkbox"><span>Заголовки идут по порядку, ссылки понятны вне контекста</span></label></li>
+<li><label><input type="checkbox"><span>У полей форм есть подписи</span></label></li>
+<li><label><input type="checkbox"><span>Страница читается при увеличении текста до 200%</span></label></li>
+<li><label><input type="checkbox"><span>У видео есть субтитры, у аудио есть текстовая расшифровка</span></label></li>
+<li><label><input type="checkbox"><span>Информация не передаётся только цветом</span></label></li>
+</ul>
+<p class="count" role="status" aria-live="polite"></p>
+</div></section>
+<section class="alt-bg"><div class="wrap">
+<h2>На какие документы опираться</h2>
+<ul class="list">
+<li>ГОСТ Р 52872-2019: требования к доступности интернет-ресурсов;</li>
+<li>WCAG 2.2: международный стандарт доступности веб-контента;</li>
+<li>СП 59.13330.2020: доступность зданий и сооружений для маломобильных групп населения.</li>
+</ul>
+<a class="btn" href="#resources">Ссылки на документы</a>
+</div></section>
+</div>
+
+<div data-view="resources" data-title="Ресурсы">
+<section><div class="wrap">
+<h1 tabindex="-1">Ресурсы</h1>
+<p class="lead">Документы, организации и инструменты для тех, кто хочет разобраться глубже.</p>
+</div></section>
+<section class="alt-bg"><div class="wrap">
+<h2>НИУ ВШЭ</h2>
+<ul class="list res">
+<li><a href="https://www.hse.ru/studyspravka/benefits" rel="noopener" target="_blank">Карта возможностей: поддержка студентов с ОВЗ и инвалидностью</a></li>
+<li><a href="https://www.hse.ru/studyspravka/spec_uslovia" rel="noopener" target="_blank">Специальные условия обучения</a></li>
+<li><a href="https://www.hse.ru/inclusive" rel="noopener" target="_blank">Проект «Инклюзивная высшая школа»</a> (2016–2017)</li>
+<li><a href="https://www.hse.ru/inclusive/recommendations" rel="noopener" target="_blank">Рекомендации для преподавателей</a></li>
+<li><a href="https://publications.hse.ru" rel="noopener" target="_blank">Публикации ВШЭ</a> (поиск по теме «инклюзивное образование»)</li>
+</ul>
+</div></section>
+<section><div class="wrap">
+<h2>Этичная коммуникация</h2>
+<ul class="list res">
+<li><a href="https://perspektiva-inva.ru/language-etiquette/" rel="noopener" target="_blank">«Перспектива»: языковой этикет</a></li>
+<li><a href="https://antontut.ru" rel="noopener" target="_blank">Фонд «Антон тут рядом»</a></li>
+<li><a href="https://antontut.ru/wp-content/uploads/2026/04/obzor-fonda-anton-tut-ryadom.pdf" rel="noopener" target="_blank">Обзор опроса родителей детей с аутизмом (PDF, 2026)</a></li>
+</ul>
+</div></section>
+<section class="alt-bg"><div class="wrap">
+<h2>Цифровая доступность</h2>
+<ul class="list res">
+<li><a href="https://tiflocentre.ru/documents/gost-r-52872-2019.php" rel="noopener" target="_blank">ГОСТ Р 52872-2019</a></li>
+<li><a href="https://www.w3.org/TR/WCAG22/" rel="noopener" target="_blank">WCAG 2.2</a> и <a href="https://www.w3.org/WAI/" rel="noopener" target="_blank">W3C WAI</a></li>
+<li><a href="https://webaim.org/resources/contrastchecker/" rel="noopener" target="_blank">WebAIM Contrast Checker</a></li>
+<li><a href="https://wave.webaim.org" rel="noopener" target="_blank">WAVE: проверка страницы</a></li>
+<li><a href="https://www.nvaccess.org" rel="noopener" target="_blank">NVDA: бесплатный скринридер</a></li>
+</ul>
+</div></section>
+<section><div class="wrap">
+<h2>Физическая среда и карты</h2>
+<ul class="list res">
+<li><a href="https://zhit-vmeste.ru" rel="noopener" target="_blank">«Жить вместе»: паспорта доступности объектов</a></li>
+<li><a href="https://moscowinclusion.bitrix24site.ru/" rel="noopener" target="_blank">Онлайн-гид по инклюзивным местам Москвы</a></li>
+<li>СП 59.13330.2020 «Доступность зданий и сооружений для МГН»</li>
+<li>Конвенция ООН о правах инвалидов (2006) и ФЗ № 181-ФЗ</li>
+</ul>
+</div></section>
+</div>
+
+<div data-view="about" data-title="О проекте">
+<section><div class="wrap">
+<h1 tabindex="-1">О проекте и контакты</h1>
+<p class="lead">«Сначала человек» — студенческий проект о развитии доступной среды и этичной коммуникации с людьми с ОВЗ.</p>
+</div></section>
+<section class="alt-bg"><div class="wrap">
+<h2>Команда</h2>
+<ul class="grid">
+<li class="card"><h3>Имя Фамилия</h3><p>Роль в проекте</p></li>
+<li class="card"><h3>Имя Фамилия</h3><p>Роль в проекте</p></li>
+<li class="card"><h3>Имя Фамилия</h3><p>Куратор проекта, НИУ ВШЭ</p></li>
+</ul>
+</div></section>
+<section><div class="wrap">
+<h2>Обратная связь</h2>
+<p>Расскажите, что полезно, что непонятно и что стоит добавить. Сообщение откроется в вашей почтовой программе.</p>
+<form id="fb">
+<label class="f" for="nm">Ваше имя</label><input type="text" id="nm" autocomplete="name">
+<label class="f" for="ms">Сообщение</label><textarea id="ms" rows="5"></textarea>
+<p style="margin-top:16px"><button class="btn" type="submit">Отправить</button></p>
+</form>
+</div></section>
+<section class="alt-bg"><div class="wrap">
+<h2>Доступность сайта</h2>
+<p>Мы стараемся следовать WCAG 2.2 и ГОСТ Р 52872-2019: сайт управляется с клавиатуры, имеет контрастные цвета и поддерживает светлую и тёмную темы. Если что-то неудобно, напишите нам через форму выше, и мы исправим.</p>
+</div></section>
+</div>
+
+</main>
+<footer><div class="wrap">
+<p><b>Сначала человек</b> · студенческий проект · НИУ ВШЭ · 2026</p>
+<ul><li><a href="#about">Контакты</a></li><li><a href="#about">Доступность сайта</a></li></ul>
+</div></footer>
+
+<script>
+(function(){
+var views=document.querySelectorAll('[data-view]'),links=document.querySelectorAll('nav a');
+function show(){
+var n=(location.hash||'#home').slice(1),f=false;
+views.forEach(function(v){if(v.dataset.view===n)f=true});
+if(!f)n='home';
+views.forEach(function(v){var on=v.dataset.view===n;v.hidden=!on;if(on){document.title=v.dataset.title+' — Сначала человек';var h=v.querySelector('h1');window.scrollTo(0,0);if(h)h.focus({preventScroll:true})}});
+links.forEach(function(a){if(a.getAttribute('href')==='#'+n)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+}
+window.addEventListener('hashchange',show);show();
+document.querySelectorAll('[data-chk]').forEach(function(l){
+var c=l.nextElementSibling,b=l.querySelectorAll('input');
+function u(){var k=0;b.forEach(function(i){if(i.checked)k++});c.textContent='Проверено: '+k+' из '+b.length}
+l.addEventListener('change',u);u();
+});
+document.getElementById('fb').addEventListener('submit',function(e){
+e.preventDefault();
+var n=document.getElementById('nm').value,m=document.getElementById('ms').value;
+location.href='mailto:info@example.com?subject='+encodeURIComponent('Обратная связь: Сначала человек')+'&body='+encodeURIComponent(m+'\n\n'+n);
+});
+})();
+</script>
+</body>
+</html>
